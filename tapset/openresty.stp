@@ -1,0 +1,64 @@
+@define RESTYLIB
+%(
+    "/opt/openresty/nginx/sbin/nginx"
+%)
+
+probe ngx_http_all = process(@RESTYLIB).function("ngx_http*") {
+    if (target() != pid()) {
+        next;
+    }
+    printf("%s -> %s\n", thread_indent(1), probefunc());
+}
+
+probe ngx_http_all_return = process(@RESTYLIB).function("ngx_http*").return {
+    if (target() != pid()) {
+        next;
+    }
+    thread_indent(-1);
+}
+
+probe ngx_http_variable_request_time = process(@RESTYLIB).function("ngx_http_variable_request_time") {
+    if (target() != pid()) {
+        next;
+    }
+    req = $r;
+}
+
+probe ngx_http_upstream_response_time_variable = process(@RESTYLIB).function("ngx_http_upstream_response_time_variable") {
+
+    if (target() != pid()) {
+        next;
+    }
+}
+
+probe ngx_http_upstream_response_time_variable_return = process(@RESTYLIB).function("ngx_http_upstream_response_time_variable").return {
+
+    if (target() != pid()) {
+        next;
+    }
+}
+
+probe ngx_http_upstream_finalize_request = process(@RESTYLIB).function("ngx_http_upstream_finalize_request") {
+    if (target() != pid()) {
+        next;
+    }
+}
+
+probe ngx_http_upstream_finalize_request_return = process(@RESTYLIB).function("ngx_http_upstream_finalize_request").return {
+    if (target() != pid()) {
+        next;
+    }
+}
+
+probe ngx_http_upstream_connect = process(@RESTYLIB).function("ngx_http_upstream_connect") {
+
+    if (target() != pid()) {
+        next;
+    }
+}
+
+probe ngx_http_upstream_connect_return = process(@RESTYLIB).function("ngx_http_upstream_connect").return {
+    if (target() != pid()) {
+        next;
+    }
+}

@@ -1,0 +1,282 @@
+     0 openresty(104000):    -> ngx_http_init_connection
+     0 openresty(104000):    -> ngx_http_wait_request_handler
+     8 openresty(104000):        -> ngx_http_create_request
+    15 openresty(104000):        -> ngx_http_process_request_line
+    19 openresty(104000):            -> ngx_http_read_request_header
+    27 openresty(104000):            -> ngx_http_parse_request_line
+    35 openresty(104000):            -> ngx_http_process_request_uri
+    42 openresty(104000):            -> ngx_http_process_request_headers
+    45 openresty(104000):                -> ngx_http_read_request_header
+    50 openresty(104000):                -> ngx_http_parse_header_line
+    56 openresty(104000):                -> ngx_http_process_host
+    59 openresty(104000):                    -> ngx_http_validate_host.isra.0
+    62 openresty(104000):                    -> ngx_http_set_virtual_server
+    65 openresty(104000):                        -> ngx_http_find_virtual_server.isra.0
+    71 openresty(104000):                -> ngx_http_parse_header_line
+    77 openresty(104000):                -> ngx_http_process_user_agent
+    81 openresty(104000):                    -> ngx_http_process_user_agent
+    87 openresty(104000):                    -> ngx_http_parse_header_line
+    93 openresty(104000):                    -> ngx_http_parse_header_line
+   101 openresty(104000):                    -> ngx_http_process_request_header
+   108 openresty(104000):                    -> ngx_http_process_request
+   117 openresty(104000):                        -> ngx_http_handler
+   124 openresty(104000):                            -> ngx_http_core_run_phases
+   132 openresty(104000):                                -> ngx_http_core_rewrite_phase
+   140 openresty(104000):                                -> ngx_http_core_rewrite_phase
+   150 openresty(104000):                                    -> ngx_http_rewrite_handler
+   160 openresty(104000):                                -> ngx_http_core_find_config_phase
+   164 openresty(104000):                                    -> ngx_http_core_find_location
+   168 openresty(104000):                                        -> ngx_http_core_find_location
+   173 openresty(104000):                                            -> ngx_http_core_find_location
+   176 openresty(104000):                                                -> ngx_http_core_find_location
+   185 openresty(104000):                                            -> ngx_http_update_location_config
+   194 openresty(104000):                                        -> ngx_http_core_rewrite_phase
+   200 openresty(104000):                                        -> ngx_http_core_rewrite_phase
+   204 openresty(104000):                                            -> ngx_http_rewrite_handler
+   215 openresty(104000):                                        -> ngx_http_core_post_rewrite_phase
+   223 openresty(104000):                                        -> ngx_http_core_generic_phase
+   230 openresty(104000):                                            -> ngx_http_limit_req_handler
+   241 openresty(104000):                                        -> ngx_http_core_generic_phase
+   248 openresty(104000):                                            -> ngx_http_limit_conn_handler
+   271 openresty(104000):                                        -> ngx_http_core_access_phase
+   276 openresty(104000):                                            -> ngx_http_access_handler
+   284 openresty(104000):                                        -> ngx_http_core_access_phase
+   287 openresty(104000):                                            -> ngx_http_auth_basic_handler
+   295 openresty(104000):                                        -> ngx_http_core_post_access_phase
+   300 openresty(104000):                                        -> ngx_http_core_generic_phase
+   304 openresty(104000):                                            -> ngx_http_try_files_handler
+   311 openresty(104000):                                        -> ngx_http_core_generic_phase
+   315 openresty(104000):                                            -> ngx_http_mirror_handler
+   324 openresty(104000):                                        -> ngx_http_core_content_phase
+   329 openresty(104000):                                            -> ngx_http_proxy_handler
+   335 openresty(104000):                                                -> ngx_http_upstream_create
+   341 openresty(104000):                                                -> ngx_http_proxy_handler
+   348 openresty(104000):                                                    -> ngx_http_read_client_request_body
+   351 openresty(104000):                                                        -> ngx_http_read_client_request_body
+   355 openresty(104000):                                                            -> ngx_http_test_expect
+   361 openresty(104000):                                                            -> ngx_http_upstream_init
+   367 openresty(104000):                                                                -> ngx_http_upstream_init_request
+   371 openresty(104000):                                                                    -> ngx_http_proxy_create_request
+   376 openresty(104000):                                                                        -> ngx_http_script_flush_no_cacheable_variables
+   382 openresty(104000):                                                                        -> ngx_http_script_flush_no_cacheable_variables
+   390 openresty(104000):                                                                        -> ngx_http_script_copy_len_code
+   397 openresty(104000):                                                                        -> ngx_http_script_copy_var_len_code
+   402 openresty(104000):                                                                            -> ngx_http_get_indexed_variable
+   406 openresty(104000):                                                                                -> ngx_http_proxy_host_variable
+   417 openresty(104000):                                                                        -> ngx_http_script_copy_len_code
+   423 openresty(104000):                                                                        -> ngx_http_script_copy_len_code
+   429 openresty(104000):                                                                        -> ngx_http_script_copy_len_code
+   433 openresty(104000):                                                                        -> ngx_http_script_copy_var_len_code
+   436 openresty(104000):                                                                            -> ngx_http_get_indexed_variable
+   439 openresty(104000):                                                                                -> ngx_http_proxy_internal_body_length_variable
+   446 openresty(104000):                                                                        -> ngx_http_script_copy_len_code
+   452 openresty(104000):                                                                        -> ngx_http_script_copy_var_len_code
+   456 openresty(104000):                                                                            -> ngx_http_get_indexed_variable
+   461 openresty(104000):                                                                                -> ngx_http_proxy_internal_chunked_variable
+   477 openresty(104000):                                                                        -> ngx_http_script_copy_len_code
+   484 openresty(104000):                                                                        -> ngx_http_script_copy_var_len_code
+   489 openresty(104000):                                                                            -> ngx_http_get_indexed_variable
+   497 openresty(104000):                                                                        -> ngx_http_script_copy_code
+   505 openresty(104000):                                                                        -> ngx_http_script_copy_var_code
+   511 openresty(104000):                                                                            -> ngx_http_get_indexed_variable
+   518 openresty(104000):                                                                        -> ngx_http_script_copy_len_code
+   524 openresty(104000):                                                                        -> ngx_http_script_copy_len_code
+   531 openresty(104000):                                                                        -> ngx_http_script_copy_code
+   537 openresty(104000):                                                                        -> ngx_http_script_copy_code
+   542 openresty(104000):                                                                        -> ngx_http_script_copy_len_code
+   548 openresty(104000):                                                                        -> ngx_http_script_copy_var_len_code
+   553 openresty(104000):                                                                            -> ngx_http_get_indexed_variable
+   561 openresty(104000):                                                                        -> ngx_http_script_copy_code
+   567 openresty(104000):                                                                        -> ngx_http_script_copy_var_code
+   574 openresty(104000):                                                                        -> ngx_http_script_copy_len_code
+   580 openresty(104000):                                                                        -> ngx_http_script_copy_var_len_code
+   585 openresty(104000):                                                                            -> ngx_http_get_indexed_variable
+   594 openresty(104000):                                                                        -> ngx_http_script_copy_code
+   599 openresty(104000):                                                                        -> ngx_http_script_copy_var_code
+   615 openresty(104000):                                                                    -> ngx_http_upstream_init_request
+   623 openresty(104000):                                                                        -> ngx_http_cleanup_add
+   633 openresty(104000):                                                                        -> ngx_http_upstream_init_round_robin_peer
+   641 openresty(104000):                                                                        -> ngx_http_upstream_connect
+   646 openresty(104000):                                                                            -> ngx_http_upstream_get_round_robin_peer
+   828 openresty(104000):                                                        -> ngx_http_finalize_request
+   831 openresty(104000):                                                            -> ngx_http_finalize_connection
+   834 openresty(104000):                                                                -> ngx_http_close_request.isra.0
+   845 openresty(104000):                                        -> ngx_http_run_posted_requests
+   851 openresty(104000):                                    -> ngx_http_run_posted_requests
+   864 openresty(104000):                            -> ngx_http_request_handler
+   869 openresty(104000):                                -> ngx_http_upstream_wr_check_broken_connection
+   873 openresty(104000):                                    -> ngx_http_upstream_check_broken_connection
+   878 openresty(104000):                                -> ngx_http_run_posted_requests
+   884 openresty(104000):                            -> ngx_http_upstream_handler
+   888 openresty(104000):                                -> ngx_http_upstream_send_request_handler
+   892 openresty(104000):                                    -> ngx_http_upstream_send_request
+   894 openresty(104000):                                        -> ngx_http_upstream_test_connect
+   900 openresty(104000):                                        -> ngx_http_upstream_send_request
+  1259 openresty(104000):                                    -> ngx_http_run_posted_requests
+1504348 openresty(104000):                                -> ngx_http_upstream_handler
+1504367 openresty(104000):                                    -> ngx_http_upstream_process_header
+1504401 openresty(104000):                                        -> ngx_http_proxy_process_status_line
+1504414 openresty(104000):                                            -> ngx_http_parse_status_line
+1504440 openresty(104000):                                            -> ngx_http_proxy_process_header
+1504450 openresty(104000):                                                -> ngx_http_parse_header_line
+1504473 openresty(104000):                                                -> ngx_http_upstream_process_header_line
+1504491 openresty(104000):                                                -> ngx_http_parse_header_line
+1504511 openresty(104000):                                                -> ngx_http_upstream_process_header_line
+1504528 openresty(104000):                                                -> ngx_http_parse_header_line
+1504546 openresty(104000):                                                -> ngx_http_upstream_process_header_line
+1504563 openresty(104000):                                                -> ngx_http_parse_header_line
+1504583 openresty(104000):                                                -> ngx_http_upstream_process_content_length
+1504597 openresty(104000):                                                -> ngx_http_parse_header_line
+1504617 openresty(104000):                                                -> ngx_http_upstream_process_connection
+1504631 openresty(104000):                                                -> ngx_http_parse_header_line
+1504658 openresty(104000):                                        -> ngx_http_upstream_process_headers
+1504668 openresty(104000):                                            -> ngx_http_upstream_copy_content_type
+1504683 openresty(104000):                                            -> ngx_http_upstream_ignore_header_line
+1504702 openresty(104000):                                            -> ngx_http_upstream_ignore_header_line
+1504726 openresty(104000):                                        -> ngx_http_upstream_process_header
+1504740 openresty(104000):                                            -> ngx_http_send_header
+1504750 openresty(104000):                                                -> ngx_http_not_modified_header_filter
+1504763 openresty(104000):                                                    -> ngx_http_lua_header_filter
+1504774 openresty(104000):                                                        -> ngx_http_headers_filter
+1504783 openresty(104000):                                                            -> ngx_http_headers_filter
+1504797 openresty(104000):                                                                -> ngx_http_userid_filter
+1504807 openresty(104000):                                                                    -> ngx_http_userid_filter
+1504821 openresty(104000):                                                                        -> ngx_http_charset_header_filter
+1504831 openresty(104000):                                                                            -> ngx_http_charset_header_filter
+1504845 openresty(104000):                                                                                -> ngx_http_ssi_header_filter
+1504855 openresty(104000):                                                                                    -> ngx_http_gzip_header_filter
+1504866 openresty(104000):                                                                                        -> ngx_http_range_header_filter
+1504875 openresty(104000):                                                                                            -> ngx_http_chunked_header_filter
+1504885 openresty(104000):                                                                                                -> ngx_http_chunked_header_filter
+1504897 openresty(104000):                                                                                                    -> ngx_http_header_filter
+1504906 openresty(104000):                                                                                                        -> ngx_http_header_filter
+1504922 openresty(104000):                                                                                                            -> ngx_http_write_filter
+1504983 openresty(104000):                                                                -> ngx_http_test_predicates
+1504998 openresty(104000):                                                                -> ngx_http_proxy_input_filter_init
+1505013 openresty(104000):                                                                -> ngx_http_upstream_process_upstream
+1505024 openresty(104000):                                                                    -> ngx_http_proxy_copy_filter
+1505037 openresty(104000):                                                                        -> ngx_http_proxy_copy_filter
+1505059 openresty(104000):                                                                        -> ngx_http_upstream_output_filter
+1505069 openresty(104000):                                                                            -> ngx_http_output_filter
+1505078 openresty(104000):                                                                                -> ngx_http_range_body_filter
+1505087 openresty(104000):                                                                                    -> ngx_http_copy_filter
+1505099 openresty(104000):                                                                                        -> ngx_http_lua_body_filter
+1505109 openresty(104000):                                                                                            -> ngx_http_lua_body_filter
+1505121 openresty(104000):                                                                                                -> ngx_http_lua_body_filter
+1505134 openresty(104000):                                                                                                    -> ngx_http_cleanup_add
+1505149 openresty(104000):                                                                                                    -> ngx_http_lua_body_filter_inline
+1505159 openresty(104000):                                                                                                        -> ngx_http_lua_body_filter_inline
+1505171 openresty(104000):                                                                                                            -> ngx_http_lua_body_filter_inline
+1505186 openresty(104000):                                                                                                                -> ngx_http_lua_cache_loadbuffer
+1505196 openresty(104000):                                                                                                                    -> ngx_http_lua_cache_load_code.isra.0
+1505226 openresty(104000):                                                                                                                -> ngx_http_lua_body_filter_by_chunk
+1505236 openresty(104000):                                                                                                                    -> ngx_http_lua_body_filter_by_chunk
+1505241 openresty(104000):                                                                                                                        -> ngx_http_lua_body_filter_by_chunk
+1505251 openresty(104000):                                                                                                                            -> ngx_http_lua_pcre_malloc_init
+1505297 openresty(104000):                                                                                                                            -> ngx_http_lua_ffi_var_get
+1505308 openresty(104000):                                                                                                                                -> ngx_http_get_variable
+1505319 openresty(104000):                                                                                                                                    -> ngx_http_get_flushed_variable
+1505332 openresty(104000):                                                                                                                                        -> ngx_http_get_indexed_variable
+1505342 openresty(104000):                                                                                                                                            -> ngx_http_upstream_response_time_variable
+1505387 openresty(104000):                                                                                                                            -> ngx_http_lua_ffi_var_get
+1505396 openresty(104000):                                                                                                                                -> ngx_http_get_variable
+1505408 openresty(104000):                                                                                                                                    -> ngx_http_variable_request_time
+1505442 openresty(104000):                                                                                                                            -> ngx_http_lua_ngx_log
+1505452 openresty(104000):                                                                                                                                -> ngx_http_lua_ngx_log
+1505470 openresty(104000):                                                                                                                                    -> ngx_http_log_error
+1505481 openresty(104000):                                                                                                                                        -> ngx_http_log_error_handler
+1505545 openresty(104000):                                                                                                                                -> ngx_http_lua_pcre_malloc_done
+1505577 openresty(104000):                                                                                                                        -> ngx_http_trailers_filter
+1505587 openresty(104000):                                                                                                                            -> ngx_http_charset_body_filter
+1505596 openresty(104000):                                                                                                                                -> ngx_http_ssi_body_filter
+1505606 openresty(104000):                                                                                                                                    -> ngx_http_postpone_filter
+1505616 openresty(104000):                                                                                                                                        -> ngx_http_gzip_body_filter
+1505626 openresty(104000):                                                                                                                                            -> ngx_http_chunked_body_filter
+1505636 openresty(104000):                                                                                                                                                -> ngx_http_write_filter
+1505710 openresty(104000):                                                                                                    -> ngx_http_upstream_process_request
+1505720 openresty(104000):                                                                                                        -> ngx_http_upstream_finalize_request
+1505730 openresty(104000):                                                                                                            -> ngx_http_proxy_finalize_request
+1505749 openresty(104000):                                                                                                            -> ngx_http_upstream_free_round_robin_peer
+1505868 openresty(104000):                                                                                                            -> ngx_http_upstream_finalize_request
+1505883 openresty(104000):                                                                                                                -> ngx_http_send_special
+1505940 openresty(104000):                                                                                                                    -> ngx_http_output_filter
+1505951 openresty(104000):                                                                                                                        -> ngx_http_range_body_filter
+1505961 openresty(104000):                                                                                                                            -> ngx_http_copy_filter
+1505971 openresty(104000):                                                                                                                                -> ngx_http_lua_body_filter
+1505980 openresty(104000):                                                                                                                                    -> ngx_http_lua_body_filter_inline
+1505989 openresty(104000):                                                                                                                                        -> ngx_http_lua_body_filter_inline
+1506002 openresty(104000):                                                                                                                                            -> ngx_http_lua_body_filter_inline
+1506016 openresty(104000):                                                                                                                                                -> ngx_http_lua_cache_loadbuffer
+1506025 openresty(104000):                                                                                                                                                    -> ngx_http_lua_cache_load_code.isra.0
+1506053 openresty(104000):                                                                                                                                                -> ngx_http_lua_body_filter_by_chunk
+1506062 openresty(104000):                                                                                                                                                    -> ngx_http_lua_body_filter_by_chunk
+1506068 openresty(104000):                                                                                                                                                        -> ngx_http_lua_body_filter_by_chunk
+1506078 openresty(104000):                                                                                                                                                            -> ngx_http_lua_pcre_malloc_init
+1506107 openresty(104000):                                                                                                                                                            -> ngx_http_lua_ffi_var_get
+1506117 openresty(104000):                                                                                                                                                                -> ngx_http_get_variable
+1506127 openresty(104000):                                                                                                                                                                    -> ngx_http_get_flushed_variable
+1506141 openresty(104000):                                                                                                                                                                        -> ngx_http_get_indexed_variable
+1506151 openresty(104000):                                                                                                                                                                            -> ngx_http_upstream_response_time_variable
+1506192 openresty(104000):                                                                                                                                                            -> ngx_http_lua_ffi_var_get
+1506201 openresty(104000):                                                                                                                                                                -> ngx_http_get_variable
+1506212 openresty(104000):                                                                                                                                                                    -> ngx_http_variable_request_time
+1506242 openresty(104000):                                                                                                                                                            -> ngx_http_lua_ngx_log
+1506251 openresty(104000):                                                                                                                                                                -> ngx_http_lua_ngx_log
+1506266 openresty(104000):                                                                                                                                                                    -> ngx_http_log_error
+1506276 openresty(104000):                                                                                                                                                                        -> ngx_http_log_error_handler
+1506324 openresty(104000):                                                                                                                                                                -> ngx_http_lua_pcre_malloc_done
+1506355 openresty(104000):                                                                                                                                                        -> ngx_http_trailers_filter
+1506365 openresty(104000):                                                                                                                                                            -> ngx_http_charset_body_filter
+1506375 openresty(104000):                                                                                                                                                                -> ngx_http_ssi_body_filter
+1506385 openresty(104000):                                                                                                                                                                    -> ngx_http_postpone_filter
+1506395 openresty(104000):                                                                                                                                                                        -> ngx_http_gzip_body_filter
+1506405 openresty(104000):                                                                                                                                                                            -> ngx_http_chunked_body_filter
+1506414 openresty(104000):                                                                                                                                                                                -> ngx_http_write_filter
+1506558 openresty(104000):                                                                                                                                    -> ngx_http_finalize_request
+1506569 openresty(104000):                                                                                                                                        -> ngx_http_post_action
+1506585 openresty(104000):                                                                                                                                        -> ngx_http_finalize_connection
+1506595 openresty(104000):                                                                                                                                            -> ngx_http_finalize_connection
+1506609 openresty(104000):                                                                                                                                                -> ngx_http_free_request
+1506621 openresty(104000):                                                                                                                                                    -> ngx_http_lua_request_cleanup_handler
+1506635 openresty(104000):                                                                                                                                                        -> ngx_http_lua_request_cleanup
+1506648 openresty(104000):                                                                                                                                                            -> ngx_http_lua_request_cleanup
+1506665 openresty(104000):                                                                                                                                                                -> ngx_http_lua_finalize_threads
+1506692 openresty(104000):                                                                                                                                                        -> ngx_http_log_request
+1506707 openresty(104000):                                                                                                                                                            -> ngx_http_lua_log_handler
+1506721 openresty(104000):                                                                                                                                                                -> ngx_http_lua_log_handler_inline
+1506735 openresty(104000):                                                                                                                                                                    -> ngx_http_lua_log_handler_inline
+1506752 openresty(104000):                                                                                                                                                                        -> ngx_http_lua_log_handler_inline
+1506770 openresty(104000):                                                                                                                                                                            -> ngx_http_lua_cache_loadbuffer
+1506784 openresty(104000):                                                                                                                                                                                -> ngx_http_lua_cache_load_code.isra.0
+1506822 openresty(104000):                                                                                                                                                                            -> ngx_http_lua_log_by_chunk
+1506835 openresty(104000):                                                                                                                                                                                -> ngx_http_lua_log_by_chunk
+1506843 openresty(104000):                                                                                                                                                                                    -> ngx_http_lua_log_by_chunk
+1506861 openresty(104000):                                                                                                                                                                                        -> ngx_http_lua_pcre_malloc_init
+1506904 openresty(104000):                                                                                                                                                                                        -> ngx_http_lua_ffi_var_get
+1506919 openresty(104000):                                                                                                                                                                                            -> ngx_http_get_variable
+1506931 openresty(104000):                                                                                                                                                                                                -> ngx_http_get_flushed_variable
+1506948 openresty(104000):                                                                                                                                                                                                    -> ngx_http_get_indexed_variable
+1506962 openresty(104000):                                                                                                                                                                                                        -> ngx_http_upstream_response_time_variable
+1507019 openresty(104000):                                                                                                                                                                                        -> ngx_http_lua_ffi_var_get
+1507032 openresty(104000):                                                                                                                                                                                            -> ngx_http_get_variable
+1507043 openresty(104000):                                                                                                                                                                                                -> ngx_http_variable_request_time
+1507074 openresty(104000):                                                                                                                                                                                        -> ngx_http_lua_ngx_log
+1507084 openresty(104000):                                                                                                                                                                                            -> ngx_http_lua_ngx_log
+1507099 openresty(104000):                                                                                                                                                                                                -> ngx_http_log_error
+1507110 openresty(104000):                                                                                                                                                                                                    -> ngx_http_log_error_handler
+1507154 openresty(104000):                                                                                                                                                                                            -> ngx_http_lua_pcre_malloc_done
+1507191 openresty(104000):                                                                                                                                                                                -> ngx_http_log_handler
+1507203 openresty(104000):                                                                                                                                                                                    -> ngx_http_script_flush_no_cacheable_variables
+1507223 openresty(104000):                                                                                                                                                                                    -> ngx_http_log_variable_getlen
+1507234 openresty(104000):                                                                                                                                                                                        -> ngx_http_get_indexed_variable
+1507244 openresty(104000):                                                                                                                                                                                            -> ngx_http_upstream_response_time_variable
+1507266 openresty(104000):                                                                                                                                                                                        -> ngx_http_log_escape.isra.0
+1507293 openresty(104000):                                                                                                                                                                                    -> ngx_http_log_copy_long
+1507309 openresty(104000):                                                                                                                                                                                    -> ngx_http_log_variable
+1507319 openresty(104000):                                                                                                                                                                                        -> ngx_http_get_indexed_variable
+1507340 openresty(104000):                                                                                                                                                                                    -> ngx_http_log_copy_long
+1507356 openresty(104000):                                                                                                                                                                                    -> ngx_http_log_request_time
+1507376 openresty(104000):                                                                                                                                                                                    -> ngx_http_log_write
+1507465 openresty(104000):                                                                                                                                                -> ngx_http_run_posted_requests
+1507497 openresty(104000):                                                                                                                                            -> ngx_http_keepalive_handler
+1507514 openresty(104000):                                                                                                                                                -> ngx_http_close_connection

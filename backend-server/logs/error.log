@@ -1,0 +1,67 @@
+
+2020/03/23 22:42:59 [emerg] 21793#0: bind() to 0.0.0.0:8080 failed (98: Address already in use)
+2020/03/23 22:42:59 [emerg] 21793#0: bind() to 0.0.0.0:8080 failed (98: Address already in use)
+2020/03/23 22:42:59 [emerg] 21793#0: bind() to 0.0.0.0:8080 failed (98: Address already in use)
+2020/03/23 22:43:21 [emerg] 22268#0: bind() to 0.0.0.0:8080 failed (98: Address already in use)
+2020/03/23 22:43:21 [emerg] 22268#0: bind() to 0.0.0.0:8080 failed (98: Address already in use)
+2020/03/23 22:43:21 [emerg] 22268#0: bind() to 0.0.0.0:8080 failed (98: Address already in use)
+2020/03/23 22:45:54 [notice] 23502#0: signal process started
+2020/03/24 00:45:01 [error] 90415#0: failed to run the Lua code for coroutine.wrap(): 2: coroutine.wrap:2: module 'thread.exdata' not found:
+	no field package.preload['thread.exdata']
+	no file '/usr/local/openresty/site/lualib/thread/exdata.ljbc'
+	no file '/usr/local/openresty/site/lualib/thread/exdata/init.ljbc'
+	no file '/usr/local/openresty/lualib/thread/exdata.ljbc'
+	no file '/usr/local/openresty/lualib/thread/exdata/init.ljbc'
+	no file '/usr/local/openresty/site/lualib/thread/exdata.lua'
+	no file '/usr/local/openresty/site/lualib/thread/exdata/init.lua'
+	no file '/usr/local/openresty/lualib/thread/exdata.lua'
+	no file '/usr/local/openresty/lualib/thread/exdata/init.lua'
+	no file './thread/exdata.lua'
+	no file '/usr/share/luajit-2.0.5/thread/exdata.lua'
+	no file '/usr/local/share/lua/5.1/thread/exdata.lua'
+	no file '/usr/local/share/lua/5.1/thread/exdata/init.lua'
+	no file '/usr/share/lua/5.1/thread/exdata.lua'
+	no file '/usr/share/lua/5.1/thread/exdata/init.lua'
+	no file '/usr/local/openresty/site/lualib/thread/exdata.so'
+	no file '/usr/local/openresty/lualib/thread/exdata.so'
+	no file './thread/exdata.so'
+	no file '/usr/local/lib/lua/5.1/thread/exdata.so'
+	no file '/usr/lib/lua/5.1/thread/exdata.so'
+	no file '/usr/local/lib/lua/5.1/loadall.so'
+	no file '/usr/local/openresty/site/lualib/thread.so'
+	no file '/usr/local/openresty/lualib/thread.so'
+	no file './thread.so'
+	no file '/usr/local/lib/lua/5.1/thread.so'
+	no file '/usr/lib/lua/5.1/thread.so'
+	no file '/usr/local/lib/lua/5.1/loadall.so'
+2020/03/24 00:45:01 [error] 90415#0: lua_load_resty_core failed to load the resty.core module from https://github.com/openresty/lua-resty-core; ensure you are using an OpenResty release from https://openresty.org/en/download.html (rc: 2, reason: module 'resty.core' not found:
+	no field package.preload['resty.core']
+	no file '/usr/local/openresty/site/lualib/resty/core.ljbc'
+	no file '/usr/local/openresty/site/lualib/resty/core/init.ljbc'
+	no file '/usr/local/openresty/lualib/resty/core.ljbc'
+	no file '/usr/local/openresty/lualib/resty/core/init.ljbc'
+	no file '/usr/local/openresty/site/lualib/resty/core.lua'
+	no file '/usr/local/openresty/site/lualib/resty/core/init.lua'
+	no file '/usr/local/openresty/lualib/resty/core.lua'
+	no file '/usr/local/openresty/lualib/resty/core/init.lua'
+	no file './resty/core.lua'
+	no file '/usr/share/luajit-2.0.5/resty/core.lua'
+	no file '/usr/local/share/lua/5.1/resty/core.lua'
+	no file '/usr/local/share/lua/5.1/resty/core/init.lua'
+	no file '/usr/share/lua/5.1/resty/core.lua'
+	no file '/usr/share/lua/5.1/resty/core/init.lua'
+	no file '/usr/local/openresty/site/lualib/resty/core.so'
+	no file '/usr/local/openresty/lualib/resty/core.so'
+	no file './resty/core.so'
+	no file '/usr/local/lib/lua/5.1/resty/core.so'
+	no file '/usr/lib/lua/5.1/resty/core.so'
+	no file '/usr/local/lib/lua/5.1/loadall.so'
+	no file '/usr/local/openresty/site/lualib/resty.so'
+	no file '/usr/local/openresty/lualib/resty.so'
+	no file './resty.so'
+	no file '/usr/local/lib/lua/5.1/resty.so'
+	no file '/usr/lib/lua/5.1/resty.so'
+	no file '/usr/local/lib/lua/5.1/loadall.so')
+2020/03/24 00:55:58 [emerg] 103569#0: bind() to 0.0.0.0:8888 failed (98: Address already in use)
+2020/03/24 00:55:58 [emerg] 103569#0: bind() to 0.0.0.0:8888 failed (98: Address already in use)
+2020/03/24 00:55:58 [emerg] 103569#0: bind() to 0.0.0.0:8888 failed (98: Address already in use)

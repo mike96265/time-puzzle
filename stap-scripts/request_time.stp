@@ -1,0 +1,35 @@
+probe ngx_http_variable_request_time {
+    cached_time = @var("ngx_cached_time@src/core/ngx_times.c");
+    printf("ngx_cached_time: sec: %d, msec: %u\n", cached_time->sec, cached_time->msec);
+    printf("req, start_sec: %d, start_msec: %u\n", req->start_sec, req->start_msec);
+}
+
+probe ngx_http_upstream_response_time_variable_return {
+    printf("in upstream response time variable return\n")
+    current_msec = @var("ngx_current_msec@src/core/ngx_times.c");
+    printf("current_msec: %u\n", current_msec);
+    printf("")
+}
+
+probe ngx_http_upstream_finalize_request {
+    printf("in resp finalize\n")
+    current_msec = @var("ngx_current_msec@src/core/ngx_times.c");
+    printf("current_msec: %u\n", current_msec);
+}
+
+probe ngx_http_upstream_finalize_request_return {
+    printf("in resp finalize return\n")
+    current_msec = @var("ngx_current_msec@src/core/ngx_times.c");
+    printf("current_msec: %u\n", current_msec);
+    printf("---------------\n")
+}
+
+probe ngx_http_upstream_connect_return {
+    printf("---------------\n")
+    printf("in upstream connect return\n")
+    current_msec = @var("ngx_current_msec@src/core/ngx_times.c");
+    printf("current_msec: %u\n", current_msec);
+    cached_time = @var("ngx_cached_time@src/core/ngx_times.c");
+    printf("ngx_cached_time: sec: %d, msec: %u\n", cached_time->sec, cached_time->msec);
+    printf("u->start_time: %u\n", @entry($u->start_time));
+}

@@ -1,0 +1,9 @@
+
+upstream_response_time: 1.500 request_time: 1.503
+upstream_response_time: 1.507 request_time: 1.503
+upstream_response_time: 1.507 request_time: 1.507
+upstream_response_time: 1.503 request_time: 1.503
+upstream_response_time: 1.504 request_time: 1.503
+upstream_response_time: 1.507 request_time: 1.506
+upstream_response_time: 1.503 request_time: 1.504
+upstream_response_time: 1.503 request_time: 1.502

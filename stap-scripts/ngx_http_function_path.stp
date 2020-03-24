@@ -1,0 +1,7 @@
+probe ngx_http_all {
+    
+}
+
+probe ngx_http_all_return {
+
+}
